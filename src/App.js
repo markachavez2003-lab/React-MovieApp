@@ -1,15 +1,15 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 
-function App() {
-
-  const options = {
+const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
       Authorization: `Bearer ${process.env.REACT_APP_TMDB_API_KEY}`
     }
   };
+
+function App() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [moviesInPage, setMoviesInPage] = useState([]);
